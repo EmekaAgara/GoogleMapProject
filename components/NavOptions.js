@@ -1,6 +1,7 @@
 import { TouchableOpacity,FlatList, StyleSheet,Image, Text, View } from 'react-native'
 import React from 'react';
 import tw from 'tailwind-react-native-classnames';
+import {Icon} from "react-native-elements";
 
 
 const data = [
@@ -8,13 +9,25 @@ const data = [
     id:"123",
     title: "Book a trip",
     image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png",
-    screen:"MapScreen",
+    screen:"BookTrip",
   },
   {
     id:"456",
-    title: "Book a private trip",
+    title: "Rent a Boat",
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_7-removebg-preview-300x185.png",
+    screen:"RentBoat",
+  },
+  {
+    id:"789",
+    title: "Track a Boat",
     image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6733_2-removebg-preview-removebg-preview.png",
-    screen:"PtripScreen",
+    screen:"TrackBoat",
+  },
+  {
+    id:"124",
+    title: "List my Boat",
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_5-removebg-preview-300x197.png",
+    screen:"ListBoat",
   },
 ]
 
@@ -22,16 +35,22 @@ const NavOptions = () => {
   return (
     <FlatList
       data={data}
-      horizontal
+      // horizontal
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => (
-        <TouchableOpacity style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-100 m-2 w-40`} >
+        <TouchableOpacity style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-100 m-2 w-full rounded-md`} >
           <View>
             <Image
               style={{ width:120, height: 120, resizeMode:"contain" }}
               source={{ uri: item.image }}
             />
-            <Text>{item.title}</Text>
+            <Text style={tw`mt-2 text-lg font-semibold`}>{item.title}</Text>
+            {/* <Icon
+              style={tw`p-2 bg-black rounded-md w-10 mt-4`} 
+              name='arrowright' 
+              color="white" 
+              type="antdesign"
+            /> */}
           </View>
         </TouchableOpacity>
       )}
