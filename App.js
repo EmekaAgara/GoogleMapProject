@@ -3,6 +3,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 import HomeScreen from './screens/HomeScreen';
 import BookTrip from './screens/BookTrip';
+import RentBoat from './screens/RentBoat';
+import TrackBoat from './screens/TrackBoat';
+import ListBoat from './screens/ListBoat';
 import { store } from './store';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import 'react-native-gesture-handler';
@@ -32,6 +35,31 @@ export default function App() {
                 headerShown:false,
               }}
             />
+
+            <Stack.Screen
+              name='RentBoat'
+              component={RentBoat}
+              options={{
+                headerShown:false,
+              }}
+            />
+
+            <Stack.Screen
+              name='TrackBoat'
+              component={TrackBoat}
+              options={{
+                headerShown:false,
+              }}
+            />
+
+            <Stack.Screen
+              name='ListBoat'
+              component={ListBoat}
+              options={{
+                headerShown:false,
+              }}
+            />
+            
           </Stack.Navigator>
         </SafeAreaProvider>
       </NavigationContainer>
