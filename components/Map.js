@@ -24,7 +24,19 @@ const Map = () => {
             latitudeDelta: 0.000915,
             longitudeDelta: 0.0521,
         }}
-    /> 
+    > 
+        {/* {origin?.location && (
+            <Marker
+                coordinate={{
+                    latitude:origin.location.lat,
+                    longitude:origin.location.lng,
+                }}
+                title="Origin"
+                description={origin.description}
+                identifier="origin"
+            />
+        )} */}
+    </MapView>
   )
 }
 
