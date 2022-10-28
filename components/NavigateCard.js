@@ -7,6 +7,7 @@ import { useDispatch, Dispatch } from 'react-redux'
 import { setDestination } from "../slices/navSlice"
 import { useNavigation } from '@react-navigation/native'
 import { Button } from 'react-native-elements'
+import NavFavourites from './NavFavourites'
 
 
 
@@ -42,7 +43,9 @@ const NavigateCard = () => {
             nearbyPlacesAPI='GooglePlacesSearch'
             debounce={400}
           />
-            <Button
+          <NavFavourites/>
+
+          <Button
               title="Next"
               buttonStyle={{ backgroundColor: 'rgba(0, 0, 0, 1)' }}
               containerStyle={{
@@ -55,6 +58,7 @@ const NavigateCard = () => {
                 color: 'white',
                 marginHorizontal: 20,
               }}
+              
 
               onPress={(data, details = null) => {
                 

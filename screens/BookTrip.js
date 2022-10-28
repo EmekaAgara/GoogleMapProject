@@ -6,6 +6,7 @@ import MapView, {Marker} from 'react-native-maps';
 import { createStackNavigator } from '@react-navigation/stack';
 import NavigateCard from '../components/NavigateCard';
 import RideOptionsCard from '../components/RideOptionsCard';
+import NavFavourites from '../components/NavFavourites';
 
 const BookTrip = () => {
   const Stack = createStackNavigator();
@@ -16,6 +17,7 @@ const BookTrip = () => {
         <Map/>
       </View>
       <View style={tw`h-1/2`}>
+        
         <Stack.Navigator>
           <Stack.Screen
             name="NavigateCard"
@@ -41,6 +43,7 @@ const BookTrip = () => {
             }}
           /> */}
         </Stack.Navigator>
+        
       </View>
     </View>
   )
