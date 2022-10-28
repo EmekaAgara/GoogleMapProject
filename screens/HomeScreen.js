@@ -28,7 +28,7 @@ const HomeScreen = () => {
         />
 
         <GooglePlacesAutocomplete
-          placeholder='your current loacation ?'
+          placeholder='Select your current loacation ?'
           styles={{
             container:{
               flex:0,
