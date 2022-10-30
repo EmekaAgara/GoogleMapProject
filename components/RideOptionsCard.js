@@ -1,18 +1,39 @@
-import { StyleSheet, Text, View , SafeAreaView,TouchableOpacity} from 'react-native'
+import { StyleSheet, Text, View , SafeAreaView,TouchableOpacity, FlatList, Image} from 'react-native'
 import React from 'react'
 // import { TouchableOpacity } from 'react-native-gesture-handler's
 import { Icon } from 'react-native-elements'
 import tw from 'tailwind-react-native-classnames'
 import { useNavigation } from '@react-navigation/native'
 
-
 const data = [
   {
     id:"Boat_id",
     title: "Boat1",
     multiplier: 1,
-    image:"https://lottiefiles.com/125335-shape-morphing-animation"
-  }
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/5027-sailing-boat.gif"
+  },
+
+  {
+    id:"Boat_id1",
+    title: "Boat2",
+    multiplier: 1.5,
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_6-removebg-preview-300x258.png"
+  },
+
+  {
+    id:"Boat_id2",
+    title: "Boat3",
+    multiplier: 2,
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_6-removebg-preview-300x258.png"
+  },
+
+  {
+    id:"Boat_id3",
+    title: "Boat4",
+    multiplier: 2.3,
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_6-removebg-preview-300x258.png"
+  },
+
 ]
 
 const RideOptionsCard = () => {
@@ -31,6 +52,23 @@ const RideOptionsCard = () => {
           Select an option 
         </Text> 
       </View>
+
+      <FlatList
+        data={data}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item: {id, title, multiplier, image}, item }) => (
+          <TouchableOpacity>
+            <Image
+              style={{
+                width:100,
+                height:100,
+                resizeMode:"contain",
+              }}
+              source={{uri: image}}
+            />
+          </TouchableOpacity>
+        )}
+      />
     </SafeAreaView>
 
   )
