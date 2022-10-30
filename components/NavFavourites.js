@@ -23,7 +23,7 @@ const data = [
   {
     id:"333",
     location:"School",
-    icon:"briefcase",
+    icon:"school",
     destination:"University of lagos Akoka",
   },
 ];
