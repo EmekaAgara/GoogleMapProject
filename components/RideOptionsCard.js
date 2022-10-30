@@ -10,28 +10,58 @@ const data = [
     id:"Boat_id",
     title: "Boat1",
     multiplier: 1,
-    image:"https://emekaagara.com/wp-content/uploads/2022/10/5027-sailing-boat.gif"
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_6-removebg-preview-300x258.png"
   },
 
   {
     id:"Boat_id1",
     title: "Boat2",
     multiplier: 1.5,
-    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_6-removebg-preview-300x258.png"
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_5-removebg-preview-300x183.png"
   },
 
   {
     id:"Boat_id2",
     title: "Boat3",
     multiplier: 2,
-    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_6-removebg-preview-300x258.png"
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_3-removebg-preview-300x158.png"
   },
 
   {
-    id:"Boat_id3",
+    id:"Boat_id7",
+    title: "Boat3",
+    multiplier: 2,
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_2-removebg-preview.png"
+  },
+
+  {
+    id:"Boat_id4",
     title: "Boat4",
     multiplier: 2.3,
-    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_6-removebg-preview-300x258.png"
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_4-removebg-preview-252x300.png"
+  },
+  
+
+  {
+    id:"Boat_id6",
+    title: "Boat9",
+    multiplier: 2,
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727-removebg-preview.png"
+  },
+
+
+  {
+    id:"Boat_id6",
+    title: "Boat3",
+    multiplier: 2,
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_7-removebg-preview.png"
+  },
+
+  {
+    id:"Boat_id7",
+    title: "Boat4",
+    multiplier: 2.3,
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_5-removebg-preview.png"
   },
 
 ]
