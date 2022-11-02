@@ -1,7 +1,7 @@
 export default [
     {
       id: 1,
-      img: require('../assets/splash.png'),
+      img: require('../assets/book-trip.gif'),
       title: 'Book a Boat trip',
       description: 'Book an affordable boat trip to your preferred destination',
       price: '$0',

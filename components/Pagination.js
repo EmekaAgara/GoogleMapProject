@@ -54,8 +54,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   dot: {
-    width: 12,
-    height: 12,
+    width: 3,
+    height: 4,
     borderRadius: 6,
     marginHorizontal: 3,
     backgroundColor: '#ccc',
