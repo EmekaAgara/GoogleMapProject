@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import tw from 'tailwind-react-native-classnames';
 import Map from '../components/Map';
@@ -7,15 +7,27 @@ import { createStackNavigator } from '@react-navigation/stack';
 import NavigateCard from '../components/NavigateCard';
 import RideOptionsCard from '../components/RideOptionsCard';
 import NavFavourites from '../components/NavFavourites';
+import { Icon } from 'react-native-elements';
+// import { Icon } from 'react-native-elements/dist/icons/Icon';
 
 const BookTrip = () => {
   const Stack = createStackNavigator();
 
   return (
     <View>
+
+      <TouchableOpacity
+        style={tw`bg-white absolute top-16 left-8 z-50 p-3 rounded-md shadow-lg`}
+      
+      >
+      <Icon name='navigate-before'/>
+
+      </TouchableOpacity>
       <View style={tw`h-1/2 bg-gray-200`}>
         <Map/>
       </View>
+
+
       <View style={tw`h-1/2`}>
         
         <Stack.Navigator>
