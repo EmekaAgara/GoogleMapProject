@@ -8,17 +8,19 @@ import NavigateCard from '../components/NavigateCard';
 import RideOptionsCard from '../components/RideOptionsCard';
 import NavFavourites from '../components/NavFavourites';
 import { Icon } from 'react-native-elements';
+import { useNavigation } from '@react-navigation/native';
 // import { Icon } from 'react-native-elements/dist/icons/Icon';
 
 const BookTrip = () => {
   const Stack = createStackNavigator();
+  const navigation = useNavigation();
 
   return (
     <View>
 
       <TouchableOpacity
+        onPress={() => navigation.navigate("HomeScreen")}
         style={tw`bg-white absolute top-16 left-8 z-50 p-3 rounded-md shadow-lg`}
-      
       >
       <Icon name='navigate-before'/>
 
