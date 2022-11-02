@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import { Button, Icon } from 'react-native-elements'
 import tw from 'tailwind-react-native-classnames'
 import { useNavigation } from '@react-navigation/native'
+import { useSelector } from 'react-redux'
+import { selectTravelTimeInformation } from '../slices/navSlice'
 
 
 const data = [
@@ -28,48 +30,51 @@ const data = [
     image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_3-removebg-preview-300x158.png"
   },
 
-  {
-    id:"Boat_id3",
-    title: "Boat3",
-    multiplier: 2,
-    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_2-removebg-preview.png"
-  },
+  // {
+  //   id:"Boat_id3",
+  //   title: "Boat3",
+  //   multiplier: 2,
+  //   image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_2-removebg-preview.png"
+  // },
 
-  {
-    id:"Boat_id4",
-    title: "Boat4",
-    multiplier: 2.3,
-    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_4-removebg-preview-252x300.png"
-  },
+  // {
+  //   id:"Boat_id4",
+  //   title: "Boat4",
+  //   multiplier: 2.3,
+  //   image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_4-removebg-preview-252x300.png"
+  // },
   
 
-  {
-    id:"Boat_id5",
-    title: "Boat9",
-    multiplier: 2,
-    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727-removebg-preview.png"
-  },
+  // {
+  //   id:"Boat_id5",
+  //   title: "Boat9",
+  //   multiplier: 2,
+  //   image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727-removebg-preview.png"
+  // },
 
 
-  {
-    id:"Boat_id6",
-    title: "Boat3",
-    multiplier: 2,
-    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_7-removebg-preview.png"
-  },
+  // {
+  //   id:"Boat_id6",
+  //   title: "Boat3",
+  //   multiplier: 2,
+  //   image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_7-removebg-preview.png"
+  // },
 
-  {
-    id:"Boat_id7",
-    title: "Boat4",
-    multiplier: 2.3,
-    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_5-removebg-preview.png"
-  },
+  // {
+  //   id:"Boat_id7",
+  //   title: "Boat4",
+  //   multiplier: 2.3,
+  //   image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_5-removebg-preview.png"
+  // },
 
 ]
+
+const SURGE_CHARGE_RATE = 1.5;
 
 const RideOptionsCard = () => {
   const navigation = useNavigation();
   const [selected, setSelected] = useState(null);
+  const setTravelTimeInformation = useSelector(selectTravelTimeInformation);
 
   return (
     <SafeAreaView style={tw`bg-white flex-grow`}>
