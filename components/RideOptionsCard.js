@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View , SafeAreaView,TouchableOpacity, FlatList, Image} from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 // import { TouchableOpacity } from 'react-native-gesture-handler's
-import { Icon } from 'react-native-elements'
+import { Button, Icon } from 'react-native-elements'
 import tw from 'tailwind-react-native-classnames'
 import { useNavigation } from '@react-navigation/native'
+
 
 const data = [
   {
@@ -28,7 +29,7 @@ const data = [
   },
 
   {
-    id:"Boat_id7",
+    id:"Boat_id3",
     title: "Boat3",
     multiplier: 2,
     image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_2-removebg-preview.png"
@@ -43,7 +44,7 @@ const data = [
   
 
   {
-    id:"Boat_id6",
+    id:"Boat_id5",
     title: "Boat9",
     multiplier: 2,
     image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727-removebg-preview.png"
@@ -68,6 +69,7 @@ const data = [
 
 const RideOptionsCard = () => {
   const navigation = useNavigation();
+  const [selected, setSelected] = useState(null);
 
   return (
     <SafeAreaView style={tw`bg-white flex-grow`}>
@@ -87,7 +89,12 @@ const RideOptionsCard = () => {
         data={data}
         keyExtractor={(item) => item.id}
         renderItem={({ item: {id, title, multiplier, image}, item }) => (
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => setSelected(item)}
+            style={tw`flex-row justify-between items-center px-10 ${
+              id === selected?.id && "bg-gray-100"
+            }`}
+          >
             <Image
               style={{
                 width:100,
@@ -96,9 +103,23 @@ const RideOptionsCard = () => {
               }}
               source={{uri: image}}
             />
+            <View style={tw`-ml-6`}>
+              <Text style={tw`text-xl font-semibold`}>{title}</Text>
+              <Text>Travel time...</Text>
+            </View>
+            <Text style={tw`text-xl`}>N1000</Text>
           </TouchableOpacity>
         )}
       />
+
+      <View>
+        <TouchableOpacity
+        disabled={!selected}
+        style={tw`bg-black py-3 m-3 ${!selected && "bg-gray-300"}`}   
+        >
+          <Text style={tw`text-center text-white text-xl`}>Choose {selected?.title}</Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
 
   )
