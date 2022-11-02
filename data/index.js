@@ -34,4 +34,5 @@ export default [
       description: 'Join us today and get paid for completing tasks as a seaman,vessel owner,product manager or Influencer ',
       price: '$0',
     },
+    
   ];

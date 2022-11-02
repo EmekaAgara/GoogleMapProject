@@ -1,10 +1,12 @@
-import {Animated, FlatList, StyleSheet, Text, View} from 'react-native';
+import {Animated, Button, FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {useRef, useState} from 'react';
 import Slides from '../data';
 // import SlideItem from './components/SlideItem';
 import Pagination from './Pagination';
 // import Slider from './components/Slider';
 import SlideItem from './SlideItem';
+
+
 
 const Slider = () => {
   const [index, setIndex] = useState(0);
@@ -50,6 +52,7 @@ const Slider = () => {
         viewabilityConfig={viewabilityConfig}
       />
       <Pagination data={Slides} scrollX={scrollX} index={index} />
+      
     </View>
   );
 };
