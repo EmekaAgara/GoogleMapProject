@@ -13,6 +13,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 import Slider from './components/Slider';
 import SignInScreen from './screens/SignInScreen';
+import SignUpScreen from './screens/SignUpScreen';
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -37,13 +38,22 @@ export default function App() {
             />
 
 
-            <Stack.Screen
+            {/* <Stack.Screen
               name='SignInScreen'
               component={SignInScreen}
               options={{
                 headerShown:false,
               }}
+            /> */}
+
+            <Stack.Screen
+              name='SignUpScreen'
+              component={SignUpScreen}
+              options={{
+                headerShown:false,
+              }}
             />
+
 
 
             <Stack.Screen
