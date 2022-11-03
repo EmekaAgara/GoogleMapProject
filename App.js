@@ -12,6 +12,7 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 import Slider from './components/Slider';
+import SignInScreen from './screens/SignInScreen';
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -30,6 +31,15 @@ export default function App() {
             <Stack.Screen
               name='Slider'
               component={Slider}
+              options={{
+                headerShown:false,
+              }}
+            />
+
+
+            <Stack.Screen
+              name='SignInScreen'
+              component={SignInScreen}
               options={{
                 headerShown:false,
               }}

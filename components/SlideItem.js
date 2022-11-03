@@ -12,7 +12,6 @@ import {
   import React from 'react';
 import tw from 'tailwind-react-native-classnames';
 import { useNavigation } from '@react-navigation/native';
-import HomeScreen from '../screens/HomeScreen';
 
   
   const {width, height} = Dimensions.get('screen');
@@ -56,7 +55,7 @@ import HomeScreen from '../screens/HomeScreen';
         <View>
         <TouchableOpacity
         style={tw` bg-black py-3 mb-28 px-36 rounded-md w-full`}
-        onPress={() => navigation.navigate("HomeScreen")}
+        onPress={() => navigation.navigate("SignInScreen")}
         // onPress={() => navigation.navigate("HomeScreen")}   
         >
           <Text style={tw`text-center  text-white text-xl`}>Get Started</Text>

@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Splashscreen1 = () => {
+const CustomInput = () => {
   return (
     <View>
-      <Text>Splashscreen1</Text>
+      <Text>CustomInput</Text>
     </View>
   )
 }
 
-export default Splashscreen1
+export default CustomInput
 
 const styles = StyleSheet.create({})
