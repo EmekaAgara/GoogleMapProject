@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, useWindowDimensions } from 'react-native'
+import { StyleSheet, Text, View, Image, useWindowDimensions, ScrollView } from 'react-native'
 import React from 'react'
 import Logo from '../assets/login.png'
 import CustomInput from '../components/CustomInput'
@@ -22,18 +22,41 @@ const SignInScreen = () => {
     console.warn('forgot password');
   }
 
+  const onSignInFacebook=()=>{
+    console.warn('sign in facebook');
+  }
+
+  const onSignInGoogle=()=>{
+    console.warn('sign in google');
+  }
+
+  const onSignInApple=()=>{
+    console.warn('sign in apple');
+  }
+
+  const onSignupPressed=()=>{
+    console.warn('sign up');
+  }
+
 
 
 
   return (
-    <View style={styles.root}>
-      <Image source={Logo} style={[styles.logo, {height: height * 0.3}]} resizeMode='contain'/>
+    <ScrollView>
+      <View style={styles.root}>
+        <Image source={Logo} style={[styles.logo, {height: height * 0.3}]} resizeMode='contain'/>
       
-      <CustomInput placeholder="Username" value={username} setValue={setUsername}/>
-      <CustomInput placeholder="Password" value={password} setValue={setPassword} secureTextEntry />
-      <CustomButton text="Sign In" onPress={onSignInPressed}/>
-      <CustomButton text="Forgot Password" onPress={onForgotPasswordPressed} type="tertiary"/>
-    </View>
+        <CustomInput placeholder="Username" value={username} setValue={setUsername}/>
+        <CustomInput placeholder="Password" value={password} setValue={setPassword} secureTextEntry />
+        <CustomButton text="Sign In" onPress={onSignInPressed}/>
+        <CustomButton text="Forgot Password?" onPress={onForgotPasswordPressed} type="tertiary"/>
+
+        <CustomButton text="Sign In with Facebook" onPress={onSignInFacebook} bgColor="#E7EAF4" fgColor="#4765A9"/>
+        <CustomButton text="Sign In with Google" onPress={onSignInGoogle} bgColor="#FAE9EA" fgColor="#DD4D44" />
+        <CustomButton text="Sign In with Apple" onPress={onSignInApple} bgColor="#E3E3E3" fgColor="#363636" />
+        <CustomButton text="Don't have an account? Signup" onPress={onSignupPressed} type="tertiary"/>
+      </View>
+    </ScrollView>
   )
 }
 

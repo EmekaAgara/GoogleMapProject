@@ -2,10 +2,10 @@ import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 
-const CustomButton = ({ onPress, text, type = "primary" }) => {
+const CustomButton = ({ onPress, text, type = "primary", bgColor, fgColor }) => {
   return (
-    <Pressable onPress={onPress} style={[styles.container, styles[`container_${type}`]]}>
-      <Text style={[styles.text, styles[`text_${type}`]]}>{text}</Text>
+    <Pressable onPress={onPress} style={[styles.container, styles[`container_${type}`],bgColor ? {backgroundColor:bgColor} : {}]}>
+      <Text style={[styles.text, styles[`text_${type}`], fgColor ? {color:fgColor} : {},   ]}>{text}</Text>
     </Pressable>
   )
 }
