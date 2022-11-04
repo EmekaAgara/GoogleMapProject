@@ -14,6 +14,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Slider from './components/Slider';
 import SignInScreen from './screens/SignInScreen';
 import SignUpScreen from './screens/SignUpScreen';
+import ConfirmEmailScreen from './screens/ConfirmEmailScreen';
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -46,9 +47,17 @@ export default function App() {
               }}
             /> */}
 
-            <Stack.Screen
+            {/* <Stack.Screen
               name='SignUpScreen'
               component={SignUpScreen}
+              options={{
+                headerShown:false,
+              }}
+            /> */}
+
+            <Stack.Screen
+              name='ConfirmEmailScreen'
+              component={ConfirmEmailScreen}
               options={{
                 headerShown:false,
               }}

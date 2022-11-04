@@ -56,7 +56,8 @@ import { useNavigation } from '@react-navigation/native';
         <TouchableOpacity
         style={tw` bg-black py-3 mb-28 px-32 rounded-md`}
         // onPress={() => navigation.navigate("SignInScreen")}
-        onPress={() => navigation.navigate("SignUpScreen")}
+        onPress={() => navigation.navigate("ConfirmEmailScreen")}
+        // onPress={() => navigation.navigate("SignUpScreen")}
         // onPress={() => navigation.navigate("HomeScreen")}   
         >
           <Text style={tw`text-center  text-white text-xl`}>Get Started</Text>
