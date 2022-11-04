@@ -55,10 +55,10 @@ import { useNavigation } from '@react-navigation/native';
         <View>
         <TouchableOpacity
         style={tw` bg-black py-3 mb-28 px-32 rounded-md`}
-        // onPress={() => navigation.navigate("SignInScreen")}
+        onPress={() => navigation.navigate("SignInScreen")}
         // onPress={() => navigation.navigate("ConfirmEmailScreen")}
         // onPress={() => navigation.navigate("ForgotPasswordScreen")}
-        onPress={() => navigation.navigate("NewPasswordScreen")}
+        // onPress={() => navigation.navigate("NewPasswordScreen")}
         // onPress={() => navigation.navigate("SignUpScreen")}
         // onPress={() => navigation.navigate("HomeScreen")}   
         >

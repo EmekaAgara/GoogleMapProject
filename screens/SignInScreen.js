@@ -5,7 +5,10 @@ import CustomInput from '../components/CustomInput'
 import { useState } from 'react'
 import CustomButton from '../components/CustomButton'
 import SocialSignInButtons from '../components/SocialSignInButtons'
-
+import { useNavigation } from '@react-navigation/native'
+import NavOptions from '../components/NavOptions'
+import ForgotPasswordScreen from './ForgotPasswordScreen'
+import SignUpScreen from './SignUpScreen'
 
 const SignInScreen = () => {
   const [ username, setUsername ] = useState('');
@@ -13,18 +16,20 @@ const SignInScreen = () => {
 
 
   const {height} = useWindowDimensions();
+  const navigation = useNavigation();
 
 
   const onSignInPressed=()=>{
-    console.warn('sign in');
+    //validate user
+    navigation.navigate(NavOptions)
   }
 
   const onForgotPasswordPressed=()=>{
-    console.warn('forgot password');
+    navigation.navigate(ForgotPasswordScreen)
   }
 
   const onSignupPressed=()=>{
-    console.warn('sign up');
+    navigation.navigate(SignUpScreen)
     
   }
 
