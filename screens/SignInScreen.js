@@ -4,6 +4,7 @@ import Logo from '../assets/login.png'
 import CustomInput from '../components/CustomInput'
 import { useState } from 'react'
 import CustomButton from '../components/CustomButton'
+import SocialSignInButtons from '../components/SocialSignInButtons'
 
 
 const SignInScreen = () => {
@@ -20,18 +21,6 @@ const SignInScreen = () => {
 
   const onForgotPasswordPressed=()=>{
     console.warn('forgot password');
-  }
-
-  const onSignInFacebook=()=>{
-    console.warn('sign in facebook');
-  }
-
-  const onSignInGoogle=()=>{
-    console.warn('sign in google');
-  }
-
-  const onSignInApple=()=>{
-    console.warn('sign in apple');
   }
 
   const onSignupPressed=()=>{
@@ -51,11 +40,9 @@ const SignInScreen = () => {
         <CustomInput placeholder="Password" value={password} setValue={setPassword} secureTextEntry />
         <CustomButton text="Sign In" onPress={onSignInPressed}/>
         <CustomButton text="Forgot Password?" onPress={onForgotPasswordPressed} type="tertiary"/>
+        <SocialSignInButtons/>
 
-        <CustomButton text="Sign In with Facebook" onPress={onSignInFacebook} bgColor="#E7EAF4" fgColor="#4765A9"/>
-        <CustomButton text="Sign In with Google" onPress={onSignInGoogle} bgColor="#FAE9EA" fgColor="#DD4D44" />
-        <CustomButton text="Sign In with Apple" onPress={onSignInApple} bgColor="#E3E3E3" fgColor="#363636" />
-        <CustomButton text="Don't have an account? Signup" onPress={onSignupPressed} type="tertiary"/>
+        <CustomButton text="Don't have an account? Sign up" onPress={onSignupPressed} type="tertiary"/>
       </View>
     </ScrollView>
   )

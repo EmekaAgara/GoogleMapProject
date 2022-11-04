@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, SafeAreaView } from 'react-native'
 import React from 'react'
 import CustomInput from '../components/CustomInput'
 import { useState } from 'react'
 import CustomButton from '../components/CustomButton'
+import SocialSignInButtons from '../components/SocialSignInButtons'
 
 
 const SignUpScreen = () => {
@@ -20,20 +21,8 @@ const SignUpScreen = () => {
     console.warn('forgot password');
   }
 
-  const onSignInFacebook=()=>{
-    console.warn('sign in facebook');
-  }
-
-  const onSignInGoogle=()=>{
-    console.warn('sign in google');
-  }
-
-  const onSignInApple=()=>{
-    console.warn('sign in apple');
-  }
-
-  const onSignupPressed=()=>{
-    console.warn('sign up')
+  const onSigninPressed=()=>{
+    console.warn('sign in')
     
   }
 
@@ -51,7 +40,7 @@ const SignUpScreen = () => {
 
 
   return (
-    <ScrollView>
+    <SafeAreaView>
       <View style={styles.root}>
         <Text style={styles.title}>Create a NAVR account</Text>
       
@@ -61,14 +50,10 @@ const SignUpScreen = () => {
         <CustomInput placeholder="Confirm Password" value={passwordRepeat} setValue={setPasswordRepeat} secureTextEntry />
         <CustomButton text="Create Account" onPress={onRegisterPressed}/>
         <Text style={styles.text}>By creating an account, you confirm that you have accepted our{' '}<Text style={styles.link} onPress={onTermsOfUsePressed}>Terms of use</Text> and <Text style={styles.link} onPress={onPrivacyPolicyPressed}>Privacy Policy</Text></Text>
-
-        <CustomButton text="Sign In with Facebook" onPress={onSignInFacebook} bgColor="#E7EAF4" fgColor="#4765A9"/>
-        <CustomButton text="Sign In with Google" onPress={onSignInGoogle} bgColor="#FAE9EA" fgColor="#DD4D44" />
-        <CustomButton text="Sign In with Apple" onPress={onSignInApple} bgColor="#E3E3E3" fgColor="#363636" />
-        <CustomButton text="Don't have an account? Signup" onPress={onSignupPressed} type="tertiary"/>
-        
+        <SocialSignInButtons/>
+        <CustomButton text="Have an account? Sign in" onPress={onSigninPressed} type="tertiary"/>
       </View>
-    </ScrollView>
+    </SafeAreaView>
   )
 }
 
