@@ -12,12 +12,13 @@ const ForgotPasswordScreen = () => {
   const {control, handleSubmit} = useForm();
   const navigation = useNavigation();
 
-  const onSendPressed=()=>{
+  const onSendPressed=(data)=>{
+    console.warn(data);
     navigation.navigate('NewPasswordScreen')
   }
 
   const onSigninPressed=(data)=>{
-    console.warn(data);
+    
     navigation.navigate('SignInScreen')
     
   }
