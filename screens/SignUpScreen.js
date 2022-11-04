@@ -4,6 +4,7 @@ import CustomInput from '../components/CustomInput'
 import { useState } from 'react'
 import CustomButton from '../components/CustomButton'
 import SocialSignInButtons from '../components/SocialSignInButtons'
+import { useNavigation } from '@react-navigation/native'
 
 
 const SignUpScreen = () => {
@@ -12,9 +13,10 @@ const SignUpScreen = () => {
   const [ password, setPassword ] = useState('');
   const [ passwordRepeat, setPasswordRepeat ] = useState('');
 
+  const navigation = useNavigation();
 
   const onRegisterPressed=()=>{
-    console.warn('register');
+    navigation.navigate('ConfirmEmailScreen')
   }
 
   const onForgotPasswordPressed=()=>{

@@ -56,6 +56,14 @@ export default function App() {
               }}
             />
 
+            <Stack.Screen
+              name='ConfirmEmailScreen'
+              component={ConfirmEmailScreen}
+              options={{
+                headerShown:false,
+              }}
+            />
+
 
             <Stack.Screen
               name='ForgotPasswordScreen'
@@ -65,15 +73,8 @@ export default function App() {
               }}
             />
 
-            <Stack.Screen
-              name='ConfirmEmailScreen'
-              component={ConfirmEmailScreen}
-              options={{
-                headerShown:false,
-              }}
-            />
 
-              <Stack.Screen
+            <Stack.Screen
               name='SignUpScreen'
               component={SignUpScreen}
               options={{

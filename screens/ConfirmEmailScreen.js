@@ -4,13 +4,14 @@ import CustomInput from '../components/CustomInput'
 import { useState } from 'react'
 import CustomButton from '../components/CustomButton'
 import SocialSignInButtons from '../components/SocialSignInButtons'
-
+import { useNavigation } from '@react-navigation/native'
 
 const ConfirmEmailScreen = () => {
   const [ code, setCode ] = useState('');
+  const navigation = useNavigation();
 
   const onConfirmPressed=()=>{
-    console.warn('verify');
+    navigation.navigate('HomeScreen')
   }
 
   const onResendPressed=()=>{
@@ -18,7 +19,7 @@ const ConfirmEmailScreen = () => {
   }
 
   const onSigninPressed=()=>{
-    console.warn('sign in')
+    navigation.navigate('SignInScreen')
     
   }
 

@@ -9,6 +9,10 @@ import { useNavigation } from '@react-navigation/native'
 import NavOptions from '../components/NavOptions'
 import ForgotPasswordScreen from './ForgotPasswordScreen'
 import SignUpScreen from './SignUpScreen'
+import HomeScreen from './HomeScreen'
+// import NavOptionsScreen from '../components/NavOptions'
+// import NavOptionsScreen from './NavOptionsScreen'
+
 
 const SignInScreen = () => {
   const [ username, setUsername ] = useState('');
@@ -21,7 +25,7 @@ const SignInScreen = () => {
 
   const onSignInPressed=()=>{
     //validate user
-    navigation.navigate(NavOptions)
+    navigation.navigate(HomeScreen)
   }
 
   const onForgotPasswordPressed=()=>{
