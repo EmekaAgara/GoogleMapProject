@@ -2,24 +2,28 @@ import { StyleSheet, Text, View, TextInput } from 'react-native'
 import React from 'react'
 import { Controller } from 'react-hook-form'
 
-const CustomInput = ({control, name, placeholder, secureTextEntry}) => {
+const CustomInput = ({control, rules = {}, name, placeholder, secureTextEntry}) => {
   return (
-    <View style={styles.container}>
       <Controller
         control={control}
         name={name}
-        render={({field: {value,onChange, onBlur}})  =>(
-          <TextInput 
+        rules={rules}
+        render={({field: {value, onChange, onBlur}, fieldState:{error}})  =>  (
+          <>
+          <View style={[styles.container, {borderColor: error ? 'red'  : '#e8e8e8' }]}>
+          <TextInput
             value={value}
             onChangeText={onChange}
             onBlur={onBlur}
             placeholder={placeholder}
-            style={styles.input}
-            secureTextEntry={secureTextEntry} 
+            style={[styles.input, {}] }
+            secureTextEntry={secureTextEntry}
           />
+          </View>
+          <Text style={{color:'red', alignSelf:'stretch'}}>Error</Text>
+          </>
         )}
-      />
-    </View>
+      /> 
   )
 }
 
@@ -35,5 +39,6 @@ const styles = StyleSheet.create({
         paddingHorizontal:10,
         marginVertical:5,
         padding:15,
-    }
+    },
+    input:{},
 }) 

@@ -22,6 +22,7 @@ const SignInScreen = () => {
 
 
   const onSignInPressed = data =>{
+    console.log(data);
     //validate user
     navigation.navigate(HomeScreen)
   }
@@ -43,8 +44,8 @@ const SignInScreen = () => {
       <View style={styles.root}>
         <Image source={Logo} style={[styles.logo, {height: height * 0.3}]} resizeMode='contain'/>
 
-        <CustomInput name="username" placeholder="Username" control={control}/>
-        <CustomInput name="password" placeholder="Password" control={control}secureTextEntry />
+        <CustomInput name="username" placeholder="Username" control={control} rules={{required: true}}/>
+        <CustomInput name="password" placeholder="Password" control={control}secureTextEntry rules={{required: true}}/>
         <CustomButton text="Sign In" onPress={handleSubmit(onSignInPressed)}/>
         <CustomButton text="Forgot Password?" onPress={onForgotPasswordPressed} type="tertiary"/>
         <SocialSignInButtons/>
