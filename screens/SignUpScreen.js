@@ -5,13 +5,14 @@ import { useState } from 'react'
 import CustomButton from '../components/CustomButton'
 import SocialSignInButtons from '../components/SocialSignInButtons'
 import { useNavigation } from '@react-navigation/native'
+import { useForm } from 'react-hook-form'
 
+const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
 const SignUpScreen = () => {
-  const [ username, setUsername ] = useState('');
-  const [ email, setEmail ] = useState('');
-  const [ password, setPassword ] = useState('');
-  const [ passwordRepeat, setPasswordRepeat ] = useState('');
+  const {control, handleSubmit, watch}  = useForm();
+  const pwd = watch ('password');
+
 
   const navigation = useNavigation();
 
@@ -46,11 +47,11 @@ const SignUpScreen = () => {
       <View style={styles.root}>
         <Text style={styles.title}>Create a NAVR account</Text>
       
-        <CustomInput placeholder="Username" value={username} setValue={setUsername}/>
-        <CustomInput placeholder="Email address" value={email} setValue={setEmail}/>
-        <CustomInput placeholder="Password" value={password} setValue={setPassword} secureTextEntry />
-        <CustomInput placeholder="Confirm Password" value={passwordRepeat} setValue={setPasswordRepeat} secureTextEntry />
-        <CustomButton text="Create Account" onPress={onRegisterPressed}/>
+        <CustomInput name="username" control={control} placeholder="Username" rules={{required:'Enter your username',}}/>
+        <CustomInput name="email" control={control} placeholder="Email address" rules={{required:'Enter your email address', pattern: {value: EMAIL_REGEX, message:'Enter a valid email address'},}}/>
+        <CustomInput name="password" control={control} placeholder="Password" secureTextEntry rules={{required:'Enter your password',}} />
+        <CustomInput name="password-repeat" control={control} placeholder="Confirm Password" secureTextEntry rules={{validate: value => value === pwd || 'Passwords do not match',}} />
+        <CustomButton text="Create Account" onPress={handleSubmit(onRegisterPressed)}/>
         <Text style={styles.text}>By creating an account, you confirm that you have accepted our{' '}<Text style={styles.link} onPress={onTermsOfUsePressed}>Terms of use</Text> and <Text style={styles.link} onPress={onPrivacyPolicyPressed}>Privacy Policy</Text></Text>
         <SocialSignInButtons/>
         <CustomButton text="Have an account? Sign in" onPress={onSigninPressed} type="tertiary"/>
