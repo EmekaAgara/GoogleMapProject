@@ -15,6 +15,8 @@ import Slider from './components/Slider';
 import SignInScreen from './screens/SignInScreen';
 import SignUpScreen from './screens/SignUpScreen';
 import ConfirmEmailScreen from './screens/ConfirmEmailScreen';
+import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
+import NewPasswordScreen from './screens/NewPasswordScreen';
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -38,30 +40,14 @@ export default function App() {
               }}
             />
 
-
-            {/* <Stack.Screen
-              name='SignInScreen'
-              component={SignInScreen}
-              options={{
-                headerShown:false,
-              }}
-            /> */}
-
-            {/* <Stack.Screen
-              name='SignUpScreen'
-              component={SignUpScreen}
-              options={{
-                headerShown:false,
-              }}
-            /> */}
-
             <Stack.Screen
-              name='ConfirmEmailScreen'
-              component={ConfirmEmailScreen}
+              name='NewPasswordScreen'
+              component={NewPasswordScreen}
               options={{
                 headerShown:false,
               }}
             />
+
 
 
 
