@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-googlemapsproject-staging-145506-authRole",
+      "UnauthRoleArn": "arn:aws:iam::446306626002:role/amplify-googlemapsproject-staging-145506-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::446306626002:role/amplify-googlemapsproject-staging-145506-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-googlemapsproject-staging-145506-deployment",
+      "UnauthRoleName": "amplify-googlemapsproject-staging-145506-unauthRole",
+      "StackName": "amplify-googlemapsproject-staging-145506",
+      "StackId": "arn:aws:cloudformation:us-east-1:446306626002:stack/amplify-googlemapsproject-staging-145506/d65c9270-5d19-11ed-a95f-0ee847a80f67",
+      "AmplifyAppId": "d2woy7tuyjhlx0"
+    },
+    "categories": {
+      "auth": {
+        "Googlemapsproject": {}
+      }
+    }
+  }
+}
