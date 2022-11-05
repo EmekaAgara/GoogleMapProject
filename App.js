@@ -17,6 +17,13 @@ import SignUpScreen from './screens/SignUpScreen';
 import ConfirmEmailScreen from './screens/ConfirmEmailScreen';
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 import NewPasswordScreen from './screens/NewPasswordScreen';
+import Amplify, {Auth} from 'aws-amplify';
+import config from './src/aws-exports';
+// import {withAuthenticator} from 'aws-amplify-react-native';
+
+
+
+Amplify.configure(config);
 
 export default function App() {
   const Stack = createStackNavigator();
