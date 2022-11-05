@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, useWindowDimensions, ScrollView, TextInput } from 'react-native'
+import { StyleSheet, Text, View, Image, useWindowDimensions, ScrollView, TextInput, Alert } from 'react-native'
 import React from 'react'
 import Logo from '../assets/login.png'
 import CustomInput from '../components/CustomInput'
@@ -11,21 +11,33 @@ import ForgotPasswordScreen from './ForgotPasswordScreen'
 import SignUpScreen from './SignUpScreen'
 import HomeScreen from './HomeScreen'
 import { Controller, useForm } from 'react-hook-form'
+import { Auth } from 'aws-amplify'
 // import NavOptionsScreen from '../components/NavOptions'
 // import NavOptionsScreen from './NavOptionsScreen'
+
 
 const SignInScreen = () => {
   const {height} = useWindowDimensions();
   const navigation = useNavigation();
+  const [loading, setLoading] = useState(false);
 
-  const {control, handleSubmit} = useForm();
+  const {control, handleSubmit, formState:{errors},} = useForm();
 
 
-  const onSignInPressed = data =>{
-    console.log(data);
-    //validate user
-    navigation.navigate(HomeScreen)
-  }
+  const onSignInPressed = async (data) =>{
+    if (loading) {
+      return;
+    }
+    
+    setLoading(true);
+    try{
+      const response = await Auth.signIn(data.username, data.password);
+      console.log(response);
+    } catch(e){
+      Alert.alert('Chaiii', e.message);
+    }
+    setLoading(false);
+  };
 
   const onForgotPasswordPressed=()=>{
     navigation.navigate(ForgotPasswordScreen)
@@ -46,7 +58,7 @@ const SignInScreen = () => {
 
         <CustomInput name="username" placeholder="Username" control={control} rules={{required: 'Enter your username'}}/>
         <CustomInput name="password" placeholder="Password" control={control}secureTextEntry rules={{required: 'Enter your password'}}/>
-        <CustomButton text="Sign In" onPress={handleSubmit(onSignInPressed)}/>
+        <CustomButton text={loading ? "Loading..." : "Sign In"} onPress={handleSubmit(onSignInPressed)}/>
         <CustomButton text="Forgot Password?" onPress={onForgotPasswordPressed} type="tertiary"/>
         <SocialSignInButtons/>
 
