@@ -1,25 +1,41 @@
-import { StyleSheet, Text, View, ScrollView, SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, SafeAreaView, Alert } from 'react-native'
 import React from 'react'
 import CustomInput from '../components/CustomInput'
 import { useState } from 'react'
 import CustomButton from '../components/CustomButton'
 import SocialSignInButtons from '../components/SocialSignInButtons'
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, useRoute } from '@react-navigation/native'
 import { useForm } from 'react-hook-form'
-
+import { Auth } from 'aws-amplify'
 
 const ConfirmEmailScreen = () => {
-  const{control, handleSubmit} = useForm();
+  const{control, handleSubmit, watch} = useForm({
+    defaultValues: {username: route?.params?.username},
+  });
+
+  const username = watch('username');
   const [ code, setCode ] = useState('');
   const navigation = useNavigation();
+  const route = useRoute();
 
-  const onConfirmPressed=(data)=>{
-    console.warn(data);
-    navigation.navigate('HomeScreen')
+  const onConfirmPressed = async data =>{
+    try{
+      await Auth.confirmSignUp(data.username, data.code);
+      navigation.navigate('SignInScreen')
+
+    } catch (e){
+      Alert.alert("Chaii", e.message);
+    }
+
   }
 
-  const onResendPressed=()=>{
-    console.warn('resend code');
+  const onResendPressed = async () =>{
+    try{
+      await Auth.resendSignUp(username);
+      Alert.alert("Welldone", 'Your verification code has been resent to your email');
+    } catch (e){
+      Alert.alert("Chaii", e.message);
+    }
   }
 
   const onSigninPressed=()=>{
@@ -35,6 +51,7 @@ const ConfirmEmailScreen = () => {
       <View style={styles.root}>
         <Text style={styles.title}>Confirm your Email address</Text>
       
+        <CustomInput name="username" control={control} placeholder="Enter your username" rules={{required:'Enter your username',}}/>
         <CustomInput name="code" control={control} placeholder="Enter Verification Code" rules={{required:'Enter your email confirmation code',}}/>
         <CustomButton text="Verify" onPress={handleSubmit(onConfirmPressed)}/>
         <CustomButton text="Resend Code" onPress={onResendPressed} type="secondary"/>

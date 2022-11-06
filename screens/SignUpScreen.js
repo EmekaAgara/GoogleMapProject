@@ -20,7 +20,7 @@ const SignUpScreen = () => {
     const {name, username, password, email} = data;
     try{
       await Auth.signUp({username,password,attributes:{email, name, preferred_username: username},}); 
-      navigation.navigate('ConfirmEmailScreen')
+      navigation.navigate('ConfirmEmailScreen',{username});
     } catch (e) {
       Alert.alert('Chaiii', e.message);
     }
