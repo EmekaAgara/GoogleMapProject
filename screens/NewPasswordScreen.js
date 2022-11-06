@@ -33,6 +33,7 @@ const NewPasswordScreen = () => {
         <Text style={styles.title}>Reset your Password</Text>
       
         <CustomInput placeholder="Enter confirmation code" name="code" control={control} rules={{required:'Your confirmation code is required'}} />
+        <CustomInput placeholder="Enter confirmation code" name="code" control={control} rules={{required:'Your confirmation code is required'}} />
         <CustomInput placeholder="Enter your new password" name="password" control={control} secureTextEntry rules={{required:'Enter your password'}} />
         <CustomButton text="Next" onPress={handleSubmit(onSubmitPressed)}/>
         <CustomButton text="Sign in" onPress={onSigninPressed} type="secondary"/>
