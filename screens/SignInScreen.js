@@ -33,6 +33,7 @@ const SignInScreen = () => {
     try{
       const response = await Auth.signIn(data.username, data.password);
       console.log(response);
+      navigation.navigate(HomeScreen)
     } catch(e){
       Alert.alert('Chaiii', e.message);
     }
