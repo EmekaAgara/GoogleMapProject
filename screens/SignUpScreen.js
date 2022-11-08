@@ -7,7 +7,7 @@ import SocialSignInButtons from '../components/SocialSignInButtons'
 import { useNavigation } from '@react-navigation/native'
 import { useForm } from 'react-hook-form'
 import { Auth } from 'aws-amplify'
-
+import SignInScreen from './SignInScreen'
 
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
@@ -32,7 +32,8 @@ const SignUpScreen = () => {
   }
 
   const onSigninPressed=()=>{
-    console.warn('sign in')
+    // console.warn('sign in')
+    navigation.navigate(SignInScreen)
     
   }
 

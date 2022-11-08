@@ -33,6 +33,13 @@ const data = [
     image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_5-removebg-preview-300x197.png",
     screen:"ListBoat",
   },
+
+  // {
+  //   id:"125",
+  //   title: "Logout",
+  //   image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_5-removebg-preview-300x197.png",
+  //   screen:"Logout",
+  // },
 ]
 
 const NavOptionsScreen = () => {
@@ -57,7 +64,9 @@ const NavOptionsScreen = () => {
               source={{ uri: item.image }}
             />
             <Text style={tw`mt-2 text-lg font-semibold`}>{item.title}</Text>
+            
           </View>
+          
         </TouchableOpacity>
       )}
     />
