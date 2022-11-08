@@ -38,6 +38,7 @@
     "react-native-vector-icons": "^9.2.0",
     "react-native-web": "~0.18.7",
     "react-redux": "^8.0.4",
+    "react-vector-icons": "^0.0.1",
     "tailwind-react-native-classnames": "^1.5.1"
   },
   "devDependencies": {

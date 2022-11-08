@@ -19,6 +19,8 @@ import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 import NewPasswordScreen from './screens/NewPasswordScreen';
 import Amplify, {Auth} from 'aws-amplify';
 import config from './src/aws-exports';
+import MyCart from './screens/MyCart';
+import ProductInfo from './screens/ProductInfo';
 // import {withAuthenticator} from 'aws-amplify-react-native';
 
 
@@ -109,6 +111,22 @@ export default function App() {
             <Stack.Screen
               name='RentBoat'
               component={RentBoat}
+              options={{
+                headerShown:false,
+              }}
+            />
+
+              <Stack.Screen
+              name='MyCart'
+              component={MyCart}
+              options={{
+                headerShown:false,
+              }}
+            />
+
+              <Stack.Screen
+              name='ProductInfo'
+              component={ProductInfo}
               options={{
                 headerShown:false,
               }}

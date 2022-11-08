@@ -40,6 +40,7 @@ const NavOptions = () => {
   const origin = useSelector(selectOrigin);
   return (
     <FlatList
+      showsVerticalScrollIndicator={false}
       data={data}
       // horizontal
       keyExtractor={(item) => item.id}
@@ -47,6 +48,7 @@ const NavOptions = () => {
         <TouchableOpacity 
           onPress={() => navigation.navigate(item.screen)}
           style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-100 m-2 w-full rounded-md`}
+          
           // disabled={!origin}
            >
           <View 
