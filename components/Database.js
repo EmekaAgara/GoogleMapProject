@@ -18,16 +18,14 @@ export const Items = [
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
         isOff:false,
+        isAvailable:true,
         offPercentage:'90',
-        ProductImage:require('../assets/adaptive-icon.png'),
-        ProductImageList:[
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            require('../assets/rent-boat.gif'),
+        ProductImage:require('../assets/boatimages/boat1.jpg'),
+        productImageList:[
+            require('../assets/boatimages/boat15.jpg'),
+            require('../assets/boatimages/boat21.jpg'),
+            require('../assets/boatimages/boat22.jpg'),
+            require('../assets/boatimages/boat23.jpg'),
         ]
     },
 
@@ -38,59 +36,18 @@ export const Items = [
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
         // isOff:true,
+        isAvailable:true,
         offPercentage:'50',
-        ProductImage:require('../assets/rent-boat.gif'),
-        ProductImageList:[
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
+        ProductImage:require('../assets/boatimages/boat2.jpg'),
+        productImageList:[
             require('../assets/rent-boat.gif'),
+            require('../assets/boatimages/boat15.jpg'),
+            require('../assets/boatimages/boat21.jpg'),
+            require('../assets/boatimages/boat22.jpg'),
+            require('../assets/boatimages/boat23.jpg'),
         ]
     },
 
-
-    // {
-    //     id:3,
-    //     category:'product',
-    //     productName:'Boat 1',
-    //     productPrice:'5000/Hour',
-    //     description:'this is the fastest boat on the planet | you realy should try',
-    //     isOff:true,
-    //     offPercentage:'50',
-    //     ProductImage:require('../assets/rent-boat.gif'),
-    //     ProductImageList:[
-    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-    //         require('../assets/rent-boat.gif'),
-    //     ]
-    // },
-
-    // {
-    //     id:4,
-    //     category:'product',
-    //     productName:'Boat 1',
-    //     productPrice:'5000/Hour',
-    //     description:'this is the fastest boat on the planet | you realy should try',
-    //     isOff:true,
-    //     offPercentage:'50',
-    //     ProductImage:require('../assets/rent-boat.gif'),
-    //     ProductImageList:[
-    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-    //         require('../assets/rent-boat.gif'),
-    //     ]
-    // },
 
 
     {
@@ -102,15 +59,12 @@ export const Items = [
         isOff:false,
         isAvailable:true,
         offPercentage:'90',
-        ProductImage:require('../assets/adaptive-icon.png'),
-        ProductImageList:[
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            require('../assets/rent-boat.gif'),
+        ProductImage:require('../assets/boatimages/boat3.jpg'),
+        productImageList:[
+            require('../assets/boatimages/boat15.jpg'),
+            require('../assets/boatimages/boat21.jpg'),
+            require('../assets/boatimages/boat22.jpg'),
+            require('../assets/boatimages/boat23.jpg'),
         ]
     },
 
@@ -123,15 +77,12 @@ export const Items = [
         // isOff:true,
         isAvailable:true,
         offPercentage:'50',
-        ProductImage:require('../assets/rent-boat.gif'),
-        ProductImageList:[
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            require('../assets/rent-boat.gif'),
+        ProductImage:require('../assets/boatimages/boat4.jpg'),
+        productImageList:[
+            require('../assets/boatimages/boat15.jpg'),
+            require('../assets/boatimages/boat21.jpg'),
+            require('../assets/boatimages/boat22.jpg'),
+            require('../assets/boatimages/boat23.jpg'),
         ]
     },
 
@@ -145,15 +96,12 @@ export const Items = [
         // isOff:true,
         isAvailable:true,
         offPercentage:'50',
-        ProductImage:require('../assets/rent-boat.gif'),
-        ProductImageList:[
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            require('../assets/rent-boat.gif'),
+        ProductImage:require('../assets/boatimages/boat5.jpg'),
+        productImageList:[
+            require('../assets/boatimages/boat15.jpg'),
+            require('../assets/boatimages/boat21.jpg'),
+            require('../assets/boatimages/boat22.jpg'),
+            require('../assets/boatimages/boat23.jpg'),
         ]
     },
 
@@ -166,15 +114,12 @@ export const Items = [
         // isOff:true,
         isAvailable:true,
         offPercentage:'50',
-        ProductImage:require('../assets/rent-boat.gif'),
-        ProductImageList:[
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            require('../assets/rent-boat.gif'),
+        ProductImage:require('../assets/boatimages/boat6.jpg'),
+        productImageList:[
+            require('../assets/boatimages/boat15.jpg'),
+            require('../assets/boatimages/boat21.jpg'),
+            require('../assets/boatimages/boat22.jpg'),
+            require('../assets/boatimages/boat23.jpg'),
         ]
     },
 
@@ -187,15 +132,12 @@ export const Items = [
         isOff:false,
         isAvailable:true,
         offPercentage:'90',
-        ProductImage:require('../assets/adaptive-icon.png'),
-        ProductImageList:[
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            require('../assets/rent-boat.gif'),
+        ProductImage:require('../assets/boatimages/boat7.jpg'),
+        productImageList:[
+            require('../assets/boatimages/boat15.jpg'),
+            require('../assets/boatimages/boat21.jpg'),
+            require('../assets/boatimages/boat22.jpg'),
+            require('../assets/boatimages/boat23.jpg'),
         ]
     },
 
@@ -208,15 +150,12 @@ export const Items = [
         // isOff:true,
         isAvailable:true,
         offPercentage:'50',
-        ProductImage:require('../assets/rent-boat.gif'),
-        ProductImageList:[
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            require('../assets/rent-boat.gif'),
+        ProductImage:require('../assets/boatimages/boat8.jpg'),
+        productImageList:[
+            require('../assets/boatimages/boat15.jpg'),
+            require('../assets/boatimages/boat21.jpg'),
+            require('../assets/boatimages/boat22.jpg'),
+            require('../assets/boatimages/boat23.jpg'),
         ]
     },
 
@@ -230,15 +169,12 @@ export const Items = [
         // isOff:true,
         isAvailable:true,
         offPercentage:'50',
-        ProductImage:require('../assets/rent-boat.gif'),
-        ProductImageList:[
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            require('../assets/rent-boat.gif'),
+        ProductImage:require('../assets/boatimages/boat9.jpg'),
+        productImageList:[
+            require('../assets/boatimages/boat15.jpg'),
+            require('../assets/boatimages/boat21.jpg'),
+            require('../assets/boatimages/boat22.jpg'),
+            require('../assets/boatimages/boat23.jpg'),
         ]
     },
 
@@ -251,15 +187,12 @@ export const Items = [
         // isOff:true,
         isAvailable:true,
         offPercentage:'50',
-        ProductImage:require('../assets/rent-boat.gif'),
-        ProductImageList:[
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            require('../assets/rent-boat.gif'),
+        ProductImage:require('../assets/boatimages/boat10.jpg'),
+        productImageList:[
+            require('../assets/boatimages/boat15.jpg'),
+            require('../assets/boatimages/boat21.jpg'),
+            require('../assets/boatimages/boat22.jpg'),
+            require('../assets/boatimages/boat23.jpg'),
         ]
     },
 

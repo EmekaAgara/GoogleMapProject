@@ -39,6 +39,7 @@ const RentBoat = () => {
   const ProductCard = ({data}) => {
     return (
       <TouchableOpacity
+        onPress={()=>navigation.navigate("ProductInfo", {productID: data.id})}
         style={{
           width:'48%',
           marginVertical:14,
@@ -82,9 +83,10 @@ const RentBoat = () => {
           <Image
             source={data.ProductImage}
             style={{
-              width:'80%',
-              height:'80%',
-              resizeMode:'contain',
+              width:'100%',
+              height:'100%',
+              resizeMode:'stretch',
+              borderRadius:'2'
             }}
           />
         </View>
