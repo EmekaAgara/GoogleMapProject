@@ -2,9 +2,10 @@ import { Image, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, Touchable
 import React, { useState, useEffect } from 'react'
 import { COLORS, Items } from '../components/Database'
 import Entypo from 'react-native-vector-icons/Entypo'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { useNavigation } from '@react-navigation/native'
-
+import CustomButton from '../components/CustomButton'
 
 const RentBoat = () => {
   const navigation = useNavigation();
@@ -41,11 +42,12 @@ const RentBoat = () => {
         style={{
           width:'48%',
           marginVertical:14,
+          // padding:'0.5%',
         }}>
         <View
         style={{
           width:'100%',
-          height:100,
+          height:180,
           borderRadius:7,
           backgroundColor:COLORS.backgroundLight,
           position:'relative',
@@ -86,11 +88,45 @@ const RentBoat = () => {
             }}
           />
         </View>
-        <Text>
+        <Text 
+          style={{
+            fontWeight:'bold'
+          }}
+        
+        >
           {data.productName}
         </Text>
-        {data.category == 'accessory' ? null : null}
-        <Text>₦ {data.productPrice}</Text>
+        {data.category == 'accessory' ? (
+          data.isAvailable ? (
+            <View
+              style={{
+                flexDirection:'row',
+                alignItems:'center',
+              }}>
+                <FontAwesome
+                  name="location-arrow"
+                  style={{
+                    fontSize:12,
+                    marginRight:6,
+                    color: COLORS.green,
+                  }}
+                />
+                <Text
+                  style={{
+                    fontSize:12,
+                    color:COLORS.green,
+                  }}>
+                    Near you
+                  </Text>
+              </View>
+          ) : null
+
+        ) : null}
+        <Text
+          style={{
+            color: COLORS.red,
+          }}
+        >₦ {data.productPrice}</Text>
       </TouchableOpacity>
     )
   }
@@ -119,9 +155,10 @@ const RentBoat = () => {
                 style={{
                   fontSize: 32,
                   color: COLORS.backgroundMedium,
-                  padding:12,
+                  padding:10,
                   borderRadius:7,
-                  backgroundColor:COLORS.backgroundLight,
+                  borderWidth:0.3,
+                  
                   margin:15,
 
                 }}
@@ -134,9 +171,9 @@ const RentBoat = () => {
                 style={{
                   fontSize: 32,
                   color: COLORS.backgroundMedium,
-                  padding:12,
+                  padding:10,
                   borderRadius:7,
-                  backgroundColor:COLORS.backgroundLight,
+                  borderWidth:0.3,
                   margin:15,
                 }}
               />
@@ -220,6 +257,8 @@ const RentBoat = () => {
           {products.map(data => {
             return <ProductCard data={data} key={data.id} />;})}
         </View>
+
+        
         </View>
 
         <View
@@ -276,9 +315,8 @@ const RentBoat = () => {
           {accessory.map(data => {
             return <ProductCard data={data} key={data.id} />;})}
         </View>
+        <CustomButton text="View More"type="secondary"/>
         </View>
-
- 
       </ScrollView>
       
     </View>
