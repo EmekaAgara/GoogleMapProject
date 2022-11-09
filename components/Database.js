@@ -37,7 +37,7 @@ export const Items = [
         productName:'Boat 1',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
-        isOff:true,
+        // isOff:true,
         offPercentage:'50',
         ProductImage:require('../assets/rent-boat.gif'),
         ProductImageList:[
@@ -52,45 +52,45 @@ export const Items = [
     },
 
 
-    {
-        id:3,
-        category:'product',
-        productName:'Boat 1',
-        productPrice:'5000/Hour',
-        description:'this is the fastest boat on the planet | you realy should try',
-        isOff:true,
-        offPercentage:'50',
-        ProductImage:require('../assets/rent-boat.gif'),
-        ProductImageList:[
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            require('../assets/rent-boat.gif'),
-        ]
-    },
+    // {
+    //     id:3,
+    //     category:'product',
+    //     productName:'Boat 1',
+    //     productPrice:'5000/Hour',
+    //     description:'this is the fastest boat on the planet | you realy should try',
+    //     isOff:true,
+    //     offPercentage:'50',
+    //     ProductImage:require('../assets/rent-boat.gif'),
+    //     ProductImageList:[
+    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
+    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
+    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
+    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
+    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
+    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
+    //         require('../assets/rent-boat.gif'),
+    //     ]
+    // },
 
-    {
-        id:4,
-        category:'product',
-        productName:'Boat 1',
-        productPrice:'5000/Hour',
-        description:'this is the fastest boat on the planet | you realy should try',
-        isOff:true,
-        offPercentage:'50',
-        ProductImage:require('../assets/rent-boat.gif'),
-        ProductImageList:[
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
-            require('../assets/rent-boat.gif'),
-        ]
-    },
+    // {
+    //     id:4,
+    //     category:'product',
+    //     productName:'Boat 1',
+    //     productPrice:'5000/Hour',
+    //     description:'this is the fastest boat on the planet | you realy should try',
+    //     isOff:true,
+    //     offPercentage:'50',
+    //     ProductImage:require('../assets/rent-boat.gif'),
+    //     ProductImageList:[
+    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
+    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
+    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
+    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
+    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
+    //         'https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727_2-removebg-preview.png',
+    //         require('../assets/rent-boat.gif'),
+    //     ]
+    // },
 
 
     {
@@ -100,6 +100,7 @@ export const Items = [
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
         isOff:false,
+        isAvailable:true,
         offPercentage:'90',
         ProductImage:require('../assets/adaptive-icon.png'),
         ProductImageList:[
@@ -119,7 +120,8 @@ export const Items = [
         productName:'Boat 1',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
-        isOff:true,
+        // isOff:true,
+        isAvailable:true,
         offPercentage:'50',
         ProductImage:require('../assets/rent-boat.gif'),
         ProductImageList:[
@@ -140,7 +142,8 @@ export const Items = [
         productName:'Boat 1',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
-        isOff:true,
+        // isOff:true,
+        isAvailable:true,
         offPercentage:'50',
         ProductImage:require('../assets/rent-boat.gif'),
         ProductImageList:[
@@ -160,7 +163,8 @@ export const Items = [
         productName:'Boat 1',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
-        isOff:true,
+        // isOff:true,
+        isAvailable:true,
         offPercentage:'50',
         ProductImage:require('../assets/rent-boat.gif'),
         ProductImageList:[
@@ -181,6 +185,7 @@ export const Items = [
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
         isOff:false,
+        isAvailable:true,
         offPercentage:'90',
         ProductImage:require('../assets/adaptive-icon.png'),
         ProductImageList:[
@@ -200,7 +205,8 @@ export const Items = [
         productName:'Boat 1',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
-        isOff:true,
+        // isOff:true,
+        isAvailable:true,
         offPercentage:'50',
         ProductImage:require('../assets/rent-boat.gif'),
         ProductImageList:[
@@ -221,7 +227,8 @@ export const Items = [
         productName:'Boat 1',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
-        isOff:true,
+        // isOff:true,
+        isAvailable:true,
         offPercentage:'50',
         ProductImage:require('../assets/rent-boat.gif'),
         ProductImageList:[
@@ -241,7 +248,8 @@ export const Items = [
         productName:'Boat 1',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
-        isOff:true,
+        // isOff:true,
+        isAvailable:true,
         offPercentage:'50',
         ProductImage:require('../assets/rent-boat.gif'),
         ProductImageList:[
@@ -254,13 +262,5 @@ export const Items = [
             require('../assets/rent-boat.gif'),
         ]
     },
-
-
-
-
-
-
-
-
 
 ]
