@@ -1,24 +1,24 @@
-import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import { COLORS, Items } from '../components/Database'
 import Entypo from 'react-native-vector-icons/Entypo'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { useNavigation } from '@react-navigation/native'
 
+
 const RentBoat = () => {
   const navigation = useNavigation();
 
-  const [products, setProducts] = useState([])
-  const [accessory, setAccessory] = useState([])
+  const [products, setProducts] = useState([]);
+  const [accessory, setAccessory] = useState([]);
 
   useEffect(() => {
     const unsubscribe = navigation.addListener('focus', () => {
       getDataFromDB();
     });
-  
+
     return unsubscribe;
   }, [navigation]);
-  
 
   const getDataFromDB = () => {
     let productList = [];
@@ -26,7 +26,7 @@ const RentBoat = () => {
     for (let index = 0; index < Items.length; index++) {
       if(Items[index].category == 'product'){
         productList.push(Items[index]);
-      } else if (Items[index].category == accessory) {
+      } else if (Items[index].category == 'accessory') {
         accessoryList.push(Items[index]);
       }
     }
@@ -35,7 +35,65 @@ const RentBoat = () => {
     setAccessory(accessoryList);
   };
 
-
+  const ProductCard = ({data}) => {
+    return (
+      <TouchableOpacity
+        style={{
+          width:'48%',
+          marginVertical:14,
+        }}>
+        <View
+        style={{
+          width:'100%',
+          height:100,
+          borderRadius:7,
+          backgroundColor:COLORS.backgroundLight,
+          position:'relative',
+          justifyContent:'center',
+          alignItems:'center',
+          marginBottom:'8%',
+        }}>
+          {data.isOff ? (
+            <View
+            style={{
+              position:'absolute',
+              width:'20%',
+              height:'24%',
+              backgroundColor: COLORS.green,
+              top:0,
+              left:0,
+              borderTopLeftRadius:7,
+              borderBottomRightRadius:7,
+              alignItems:'center',
+              justifyContent:'center'
+            }}>
+              <Text
+                style={{
+                  fontSize:12,
+                  color:COLORS.white,
+                  fontWeight:'bold',
+                  letterSpacing:1,
+                }}>
+                {data.offPercentage}</Text>
+            </View>
+          ) : null}
+          <Image
+            source={data.ProductImage}
+            style={{
+              width:'80%',
+              height:'80%',
+              resizeMode:'contain',
+            }}
+          />
+        </View>
+        <Text>
+          {data.productName}
+        </Text>
+        {data.category == 'accessory' ? null : null}
+        <Text>₦ {data.productPrice}</Text>
+      </TouchableOpacity>
+    )
+  }
   
   return (
     <View
@@ -108,9 +166,16 @@ const RentBoat = () => {
          Please Select your preffered boat below
         </Text>
         </View>
-          <View style={{
+        <View
+          style={{
             padding:16,
+
+          }}>
+          
+
+          <View style={{
             flexDirection:'row',
+            alignItems:'center',
             justifyContent:'space-between',
           }}>
 
@@ -145,10 +210,74 @@ const RentBoat = () => {
               More
             </Text>
         </View>
-        <View>
+        <View
+          style={{
+            flexDirection:'row',
+            flexWrap:'wrap',
+            justifyContent:'space-around',
+          }}>
+
           {products.map(data => {
-            return <Text>{data.productName}</Text>;})}
+            return <ProductCard data={data} key={data.id} />;})}
         </View>
+        </View>
+
+        <View
+          style={{
+            padding:16,
+
+          }}>
+          
+
+          <View style={{
+            flexDirection:'row',
+            alignItems:'center',
+            justifyContent:'space-between',
+          }}>
+
+          <View style={{
+            flexDirection:'row',
+            alignItems:'center',
+          }}>
+          <Text
+            style={{
+              fontSize:18,
+              fontWeight:'500',
+              letterSpacing:1,
+            }}>
+              Reccomended Boats
+            </Text>
+            <Text
+              style={{
+                fontSize:14,
+                fontWeight:'400',
+                opacity:0.5,
+                marginLeft:10,
+              }}>
+                55
+            </Text>
+          </View>
+          <Text
+            style={{
+              fontSize:14,
+              color:COLORS.blue,
+              fontWeight:'400',
+            }}>
+              More
+            </Text>
+        </View>
+        <View
+          style={{
+            flexDirection:'row',
+            flexWrap:'wrap',
+            justifyContent:'space-around',
+          }}>
+
+          {accessory.map(data => {
+            return <ProductCard data={data} key={data.id} />;})}
+        </View>
+        </View>
+
  
       </ScrollView>
       
