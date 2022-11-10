@@ -118,7 +118,7 @@ const MyCart = ({navigation}) => {
               width: '140%',
               height: '140%',
               resizeMode:'stretch',
-              borderRadius:'2'
+              borderRadius:2
             }}
           />
         </View>

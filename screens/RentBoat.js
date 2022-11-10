@@ -86,7 +86,7 @@ const RentBoat = () => {
               width:'100%',
               height:'100%',
               resizeMode:'stretch',
-              borderRadius:'2'
+              borderRadius:2
             }}
           />
         </View>

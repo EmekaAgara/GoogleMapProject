@@ -20,23 +20,23 @@ const Map = () => {
       });
     }, [origin, destination]);
 
-    // useEffect(() => {
-    //     if (!origin || !destination) return;
+    useEffect(() => {
+        if (!origin || !destination) return;
 
-    //     const getTravelTime = async() = {
-    //         fetch(
-    //             `https://map.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin.description}&destination}&destinations=${destination.description}&key=${GOOGLE_MAPS_APIKEY}`
-    //         )
+        const getTravelTime = async() => {
+            fetch(
+                `https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin.description}&destination}&destinations=${destination.description}&key=${GOOGLE_MAPS_APIKEY}`
+            )
 
-    //             .then((res) => res.json())
-    //             .then((data) => {
-    //                 dispatch(setTravelTimeInformation(data.rows[0].elements[0]));
-    //             });
+                .then((res) => res.json())
+                .then((data) => {
+                    dispatch(setTravelTimeInformation(data.rows[0].elements[0]));
+                });
         
-    //     };
+        };
 
-    //     getTravelTime();
-    // }, [origin, destination,GOOGLE_MAPS_APIKEY]);
+        getTravelTime();
+    }, [origin, destination,GOOGLE_MAPS_APIKEY]);
 
   return (
     <MapView
@@ -44,15 +44,15 @@ const Map = () => {
         style={tw`flex-1`}
         mapType='satellite'
         region={{
-            // latitude: origin.location.lat,
-            // longitude: origin.location.lng,
-            // latitudeDelta: 0.015,
-            // longitudeDelta: 0.0121,
+            latitude: origin.location.lat,
+            longitude: origin.location.lng,
+            latitudeDelta: 0.015,
+            longitudeDelta: 0.0121,
 
-            latitude: 31.2198,
-            longitude: 121.4870,
-            latitudeDelta: 0.000915,
-            longitudeDelta: 0.0521,
+            // latitude: 31.2198,
+            // longitude: 121.4870,
+            // latitudeDelta: 0.000915,
+            // longitudeDelta: 0.0521,
         }}
     > 
         {origin && destination && (
@@ -66,7 +66,7 @@ const Map = () => {
 
         )}
 
-        {/* {origin?.location && (
+        {origin?.location && (
             <Marker
                 coordinate={{
                     latitude:origin.location.lat,
@@ -76,9 +76,9 @@ const Map = () => {
                 description={origin.description}
                 identifier="origin"
             />
-        )} */}
+        )}
 
-        {/* {destination?.location && (
+        {destination?.location && (
             <Marker
                 coordinate={{
                     latitude:destination.location.lat,
@@ -88,7 +88,7 @@ const Map = () => {
                 description={destination.description}
                 identifier="destination"
             />
-        )} */}
+        )}
         
     </MapView>
   )
