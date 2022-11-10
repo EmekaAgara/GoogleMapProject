@@ -113,11 +113,12 @@ const MyCart = ({navigation}) => {
             marginRight: 22,
           }}>
           <Image
-            source={data.productImage}
+            source={data.ProductImage}
             style={{
-              width: '100%',
-              height: '100%',
-              resizeMode: 'contain',
+              width: '140%',
+              height: '140%',
+              resizeMode:'stretch',
+              borderRadius:'2'
             }}
           />
         </View>
