@@ -6,7 +6,6 @@ import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete'
 import { GOOGLE_MAPS_APIKEY } from "@env"
 import { useDispatch } from 'react-redux';
 import { setDestination, setOrigin } from "../slices/navSlice";
-import Slider from '../components/Slider';
 
 
 
@@ -14,10 +13,6 @@ import Slider from '../components/Slider';
 const HomeScreen = () => {
   const dispatch = useDispatch();
   return (
-
-    // <SafeAreaView>
-    //   <Slider/>
-    // </SafeAreaView>
 
     <SafeAreaView style={tw`bg-white h-full`}>
       <View style={tw`p-5`} >
@@ -46,7 +41,7 @@ const HomeScreen = () => {
           onPress={(data, details = null) => {
             dispatch(setOrigin({
               location: details.geometry.location,
-              description:data.description
+              description: data.description
             }))
             console.log(data);
             console.log(details);
@@ -62,7 +57,7 @@ const HomeScreen = () => {
           nearbyPlacesAPI='GooglePlacesSearch'
           debounce={400}
         
-        />
+        /> 
         
         <NavOptions />
        
