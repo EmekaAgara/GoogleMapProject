@@ -40,7 +40,6 @@ export const Items = [
         offPercentage:'50',
         ProductImage:require('../assets/boatimages/boat2.jpg'),
         productImageList:[
-            require('../assets/rent-boat.gif'),
             require('../assets/boatimages/boat15.jpg'),
             require('../assets/boatimages/boat21.jpg'),
             require('../assets/boatimages/boat22.jpg'),

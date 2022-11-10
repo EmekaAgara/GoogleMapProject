@@ -22,7 +22,7 @@ import config from './src/aws-exports';
 import MyCart from './screens/MyCart';
 import ProductInfo from './screens/ProductInfo';
 // import {withAuthenticator} from 'aws-amplify-react-native';
-
+import { RootSiblingParent } from 'react-native-root-siblings';
 
 
 Amplify.configure(config);
@@ -30,6 +30,7 @@ Amplify.configure(config);
 export default function App() {
   const Stack = createStackNavigator();
   return (
+    <RootSiblingParent>
 
     <Provider store={store}>
       <NavigationContainer>
@@ -154,6 +155,7 @@ export default function App() {
       </NavigationContainer>
       
     </Provider>
+    </RootSiblingParent>
   );
 }
 

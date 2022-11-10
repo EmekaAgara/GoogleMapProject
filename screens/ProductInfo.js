@@ -16,6 +16,8 @@ import { COLORS, Items } from '../components/Database'
 import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Toast from 'react-native-root-toast';
+
 
 const ProductInfo = ({route, navigation}) => {
   const {productID} = route.params;
@@ -58,11 +60,12 @@ const ProductInfo = ({route, navigation}) => {
 
       try {
         await AsyncStorage.setItem('cartItems', JSON.stringify(array));
-        ToastAndroid.show(
-          'Item Added Successfully to cart',
-          ToastAndroid.SHORT,
-        );
-        navigation.navigate('Home');
+        let toast = Toast.show(
+          'Click the cart icon at the top right corner and select a payment method',{
+            duration:Toast.durations.LONG,
+        });
+        
+        navigation.navigate('RentBoat');
       } catch (error) {
         return error;
       }
@@ -120,9 +123,7 @@ const ProductInfo = ({route, navigation}) => {
         <View
           style={{
             width: '100%',
-            backgroundColor: COLORS.backgroundLight,
-            borderBottomRightRadius: 20,
-            borderBottomLeftRadius: 20,
+            // backgroundColor: COLORS.backgroundLight,
             position: 'relative',
             justifyContent: 'center',
             alignItems: 'center',
@@ -136,18 +137,23 @@ const ProductInfo = ({route, navigation}) => {
               paddingTop: 16,
               paddingLeft: 16,
             }}>
+
             <TouchableOpacity onPress={() => navigation.goBack('Home')}>
               <Entypo
-                name="chevron-left"
+                name="chevron-small-left"
                 style={{
-                  fontSize: 18,
-                  color: COLORS.backgroundDark,
-                  padding: 12,
-                  backgroundColor: COLORS.white,
-                  borderRadius: 10,
+                  fontSize: 20,
+                  color: COLORS.backgroundMedium,
+                  padding:10,
+                  borderRadius:7,
+                  borderWidth:0.3,
+                  
+                  margin:15,
+
                 }}
               />
             </TouchableOpacity>
+
           </SafeAreaView>
           <FlatList
             data={product.productImageList ? product.productImageList : null}
@@ -203,14 +209,12 @@ const ProductInfo = ({route, navigation}) => {
             style={{
               flexDirection: 'row',
               alignItems: 'center',
-              marginVertical: 14,
+              marginVertical: 7,
             }}>
             <Entypo
-              name="shopping-cart"
               style={{
                 fontSize: 18,
                 color: COLORS.blue,
-                marginRight: 6,
               }}
             />
             <Text
@@ -218,9 +222,45 @@ const ProductInfo = ({route, navigation}) => {
                 fontSize: 12,
                 color: COLORS.black,
               }}>
-              My Orders
+              This boat is Owned and Operated by
+            </Text>
+            <Text
+              style={{
+                fontSize: 12,
+                color: COLORS.blue,
+              }}>
+              {' '}B01456
             </Text>
           </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              marginVertical: 2,
+            }}>
+            <Entypo
+              // name="chevron-small-left"
+              style={{
+                fontSize: 18,
+                color: COLORS.blue,
+              }}
+            />
+            <Text
+              style={{
+                fontSize: 12,
+                color: COLORS.backgroundDark,
+              }}>
+              Current location
+            </Text>
+            <Text
+              style={{
+                fontSize: 12,
+                color: COLORS.blue,
+              }}>
+              {' '}FDRT356
+            </Text>
+          </View>
+          
           <View
             style={{
               flexDirection: 'row',
@@ -243,10 +283,11 @@ const ProductInfo = ({route, navigation}) => {
               name="link-outline"
               style={{
                 fontSize: 24,
+                borderRadius: 7,
                 color: COLORS.blue,
                 backgroundColor: COLORS.blue + 10,
                 padding: 8,
-                borderRadius: 100,
+                
               }}
             />
           </View>
@@ -287,18 +328,22 @@ const ProductInfo = ({route, navigation}) => {
                   alignItems: 'center',
                   justifyContent: 'center',
                   padding: 12,
-                  borderRadius: 100,
+                  borderRadius: 7,
                   marginRight: 10,
                 }}>
                 <Entypo
                   name="location-pin"
                   style={{
-                    fontSize: 16,
+                    fontSize: 20,
                     color: COLORS.blue,
                   }}
                 />
               </View>
-              <Text> Admiralty way  Lekki,{'\n'}10051, Lagos Nigeria.</Text>
+              <Text
+                style={{
+                  color: COLORS.backgroundDark,
+                }}
+              > Admiralty way  Lekki,{'\n'}10051, Lagos Nigeria.</Text>
             </View>
             <Entypo
               name="chevron-right"
@@ -322,11 +367,20 @@ const ProductInfo = ({route, navigation}) => {
               }}>
               ₦ {product.productPrice}
             </Text>
-            <Text>
-              Booking Fee 2%~ ₦{product.productPrice / 20} (₦
+            <Text
+              style={{
+                color: COLORS.backgroundDark,
+              }}
+            >
+              Booking Fee 2% of ₦{product.productPrice} (₦
               {product.productPrice + product.productPrice / 20})
             </Text>
-            <Text>
+            <Text
+              style={{
+                color: COLORS.backgroundDark,
+              }}
+            
+            >
               Seats available : 5
             </Text>
           </View>
