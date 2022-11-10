@@ -23,7 +23,7 @@ import MyCart from './screens/MyCart';
 import ProductInfo from './screens/ProductInfo';
 // import {withAuthenticator} from 'aws-amplify-react-native';
 import { RootSiblingParent } from 'react-native-root-siblings';
-
+import Successful from './screens/Successful';
 
 Amplify.configure(config);
 
@@ -144,6 +144,14 @@ export default function App() {
             <Stack.Screen
               name='ListBoat'
               component={ListBoat}
+              options={{
+                headerShown:false,
+              }}
+            />
+
+              <Stack.Screen
+              name='Successful'
+              component={Successful}
               options={{
                 headerShown:false,
               }}

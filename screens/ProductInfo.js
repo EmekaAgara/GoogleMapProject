@@ -9,7 +9,6 @@ import {
   Image,
   Dimensions,
   Animated,
-  ToastAndroid,
   SafeAreaView,
 } from 'react-native';
 import { COLORS, Items } from '../components/Database'

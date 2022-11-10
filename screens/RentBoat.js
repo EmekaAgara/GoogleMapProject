@@ -151,7 +151,7 @@ const RentBoat = () => {
             
           }}>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.goBack('Home')}>
             <Entypo
                 name="chevron-small-left"
                 style={{
@@ -167,7 +167,7 @@ const RentBoat = () => {
               />
             </TouchableOpacity>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('MyCart')}>
             <Entypo
                 name="shopping-bag"
                 style={{
