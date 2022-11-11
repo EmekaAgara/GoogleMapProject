@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View , SafeAreaView,TouchableOpacity, FlatList, Image} from 'react-native'
+import { StyleSheet, Text, View , SafeAreaView,TouchableOpacity, FlatList, Image, ScrollView} from 'react-native'
 import React, { useState } from 'react'
 // import { TouchableOpacity } from 'react-native-gesture-handler's
 import { Button, Icon } from 'react-native-elements'
@@ -11,23 +11,23 @@ import { selectTravelTimeInformation } from '../slices/navSlice'
 const data = [
   {
     id:"Boat_id",
-    title: "Boat1",
+    title: "JetSki",
     multiplier: 1,
-    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_6-removebg-preview-300x258.png"
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_2-removebg-preview.png"
   },
 
   {
     id:"Boat_id1",
-    title: "Boat2",
+    title: "Speed Boat",
     multiplier: 1.5,
-    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_5-removebg-preview-300x183.png"
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6727-removebg-preview.png"
   },
 
   {
     id:"Boat_id2",
-    title: "Boat3",
+    title: "Yatch",
     multiplier: 2,
-    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_3-removebg-preview-300x158.png"
+    image:"https://emekaagara.com/wp-content/uploads/2022/10/IMG_6728_7-removebg-preview.png"
   },
 
   // {
@@ -69,7 +69,7 @@ const data = [
 
 ]
 
-const SURGE_CHARGE_RATE = 1.5;
+const SURGE_CHARGE_RATE = 300;
 
 const RideOptionsCard = () => {
   const navigation = useNavigation();
@@ -77,6 +77,7 @@ const RideOptionsCard = () => {
   const travelTimeInformation = useSelector(selectTravelTimeInformation);
 
   return (
+    
     <SafeAreaView style={tw`bg-white flex-grow`}>
       <View>
         <TouchableOpacity
@@ -86,7 +87,7 @@ const RideOptionsCard = () => {
           <Icon name='chevron-left' type='fontawesome' />
         </TouchableOpacity>
         <Text style={tw`text-center py-5 text-xl`}>
-          Select an option - {travelTimeInformation?.distance.text} 
+          Distance - {travelTimeInformation?.distance.text} 
         </Text> 
       </View>
  
@@ -110,12 +111,15 @@ const RideOptionsCard = () => {
             />
             <View style={tw`-ml-6`}>
               <Text style={tw`text-xl font-semibold`}>{title}</Text>
-              <Text>{travelTimeInformation?.duration.text}Travel time...</Text>
+              <Text>Arrives in {travelTimeInformation?.duration.text}</Text>
             </View>
             <Text style={tw`text-xl`}>
-              {new Intl.NumberFormat("en-gb",{
+              {new Intl.NumberFormat(undefined,{
                 style:"currency",
                 currency:"NGN",
+                maximumFractionDigits: 0, 
+                minimumFractionDigits: 0, 
+                
               }).format(
                 (travelTimeInformation?.duration.value *
                   SURGE_CHARGE_RATE * multiplier)/ 100
@@ -137,6 +141,7 @@ const RideOptionsCard = () => {
         </TouchableOpacity>
       </View>
     </SafeAreaView>
+    
 
   )
 }

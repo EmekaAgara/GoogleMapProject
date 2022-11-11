@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import tw from 'tailwind-react-native-classnames';
 import Map from '../components/Map';
@@ -29,9 +29,8 @@ const BookTrip = () => {
         <Map/>
       </View>
 
-
+      
       <View style={tw`h-1/2`}>
-        
         <Stack.Navigator>
           <Stack.Screen
             name="NavigateCard"
@@ -57,8 +56,8 @@ const BookTrip = () => {
             }}
           /> */}
         </Stack.Navigator>
-        
       </View>
+      
     </View>
   )
 }
