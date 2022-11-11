@@ -3,7 +3,7 @@ import React from 'react'
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete'
 import tw from 'tailwind-react-native-classnames'
 import { GOOGLE_MAPS_APIKEY } from "@env"
-import { useDispatch, Dispatch } from 'react-redux'
+import { useDispatch, Dispatch, dispatch } from 'react-redux'
 import { setDestination } from "../slices/navSlice"
 import { useNavigation } from '@react-navigation/native'
 import { Button } from 'react-native-elements'
