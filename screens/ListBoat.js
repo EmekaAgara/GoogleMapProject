@@ -8,8 +8,10 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { useNavigation } from '@react-navigation/native'
 import CustomButton from '../components/CustomButton'
+import Successfull from '../screens/Successful'
 import CustomInput from '../components/CustomInput/CustomInput'
 import { useForm } from 'react-hook-form'
+
 
 
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -35,14 +37,14 @@ const ListBoat = () => {
   }
 
   const onSigninPressed=()=>{
-    // console.warn('sign in')
-    navigation.navigate(SignInScreen)
+    console.warn('Successfull')
+    // navigation.navigate(SignInScreen)
     
   }
 
   const onListPressed=()=>{
     // console.warn('sign in')
-    navigation.navigate(Successful)
+    navigation.navigate(Successfull)
     
   }
   
