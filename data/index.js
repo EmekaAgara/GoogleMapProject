@@ -3,7 +3,7 @@ export default [
       id: 1,
       img: require('../assets/book-trip.gif'),
       title: 'Book a Boat trip',
-      description: 'Book an affordable boat trip to your preferred destination',
+      description: 'The best way to book boat trips, get estimated trip prices based on travel distance.',
       price: '$0',
     },
     {

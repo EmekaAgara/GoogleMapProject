@@ -99,7 +99,8 @@ import { useNavigation } from '@react-navigation/native';
       marginVertical: 12,
       color: '#232323',
       textAlign:'center',
-      padding:10,
+      padding:15,
+      lineHeight:25,
     },
     price: {
       fontSize: 32,
