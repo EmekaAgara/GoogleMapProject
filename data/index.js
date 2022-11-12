@@ -9,15 +9,15 @@ export default [
     {
       id: 2,
       img: require('../assets/rent-boat.gif'),
-      title: 'Rent a Boat',
-      description: 'Rent your favorite boat and pay per hour',
+      title: '  Charter a Boat',
+      description: 'Search for the boat type and location and get a list of boats to Charter.',
       price: '$0',
     },
     {
       id: 3,
       img: require('../assets/track-boat.gif'),
       title: 'Track a Boat',
-      description: 'Track a boat or vessel in the ocean and determine its Location, Longitude and Latitude and the ETA to your Location',
+      description: 'Navr is finalizing the implementation of live location services for tracking boats to estimate their exact location and ETA.',
       price: '$0',
     },
     {
@@ -30,8 +30,8 @@ export default [
     {
       id: 5,
       img: require('../assets/join-our-team.gif'),
-      title: 'Join our Team',
-      description: 'Join us today and get paid for completing tasks as a seaman,vessel owner,product manager or Influencer ',
+      title: 'Partner with Us',
+      description: 'List your boat here and receive daily payment for trips completed by your boat ',
       price: '$0',
     },
     
