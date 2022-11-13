@@ -2,13 +2,8 @@ import { Image,Dimensions, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text
 import React, { useState, useEffect } from 'react'
 import { COLORS, Items } from '../components/Database'
 import Entypo from 'react-native-vector-icons/Entypo'
-import FontAwesome from 'react-native-vector-icons/FontAwesome'
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { useNavigation } from '@react-navigation/native'
 import CustomButton from '../components/CustomButton'
-import Successfull from '../screens/Successful'
-import CustomInput from '../components/CustomInput/CustomInput'
-import { useForm } from 'react-hook-form'
 import HomeScreen from './HomeScreen'
 
 
@@ -68,7 +63,7 @@ const Successful = () => {
         letterSpacing:1,
         marginBottom:10,
       }}>
-       Wanna List your boat ?
+       Successful !!
       </Text>
 
       <Text style={{
@@ -78,13 +73,13 @@ const Successful = () => {
         letterSpacing:1,
         lineHeight:24,
       }}>
-       Please Fill in your information below
+       Your request was Successful, our operator will contact you shortly.
       </Text>
       <Image
         style={styles.image}
         source={require('../assets/success.gif')}
       />
-      <CustomButton text="List Boat" onPress={onSigninPressed}/>
+      <CustomButton text="Go Back" onPress={onSigninPressed}/>
       </View>
     </ScrollView>
     

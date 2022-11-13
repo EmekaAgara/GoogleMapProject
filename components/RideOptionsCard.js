@@ -1,12 +1,11 @@
-import { StyleSheet, Text, View , SafeAreaView,TouchableOpacity, FlatList, Image, ScrollView} from 'react-native'
+import { StyleSheet, Text, View , SafeAreaView,TouchableOpacity, FlatList, Image} from 'react-native'
 import React, { useState } from 'react'
 // import { TouchableOpacity } from 'react-native-gesture-handler's
-import { Button, Icon } from 'react-native-elements'
+import { Icon } from 'react-native-elements'
 import tw from 'tailwind-react-native-classnames'
 import { useNavigation } from '@react-navigation/native'
 import { useSelector } from 'react-redux'
 import { selectTravelTimeInformation } from '../slices/navSlice'
-
 
 const data = [
   {
@@ -75,7 +74,7 @@ const RideOptionsCard = () => {
   const navigation = useNavigation();
   const [selected, setSelected] = useState(null);
   const travelTimeInformation = useSelector(selectTravelTimeInformation);
-
+  const undefined = 0
   return (
     
     <SafeAreaView style={tw`bg-white flex-grow`}>
@@ -134,10 +133,12 @@ const RideOptionsCard = () => {
 
       <View>
         <TouchableOpacity
+        onPress={() => navigation.navigate("Successful")}
         disabled={!selected}
         style={tw` bg-black py-3 m-3 ${!selected && "bg-gray-300"}`}   
         >
           <Text style={tw`text-center rounded-lg text-white text-xl`}>Choose {selected?.title}</Text>
+          
         </TouchableOpacity>
       </View>
     </SafeAreaView>

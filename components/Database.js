@@ -14,7 +14,7 @@ export const Items = [
     {
         id:1,
         category:'product',
-        productName:'Boat 1',
+        productName:'Sailboat BENETEAU Oceanis',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
         isOff:false,
@@ -32,7 +32,7 @@ export const Items = [
     {
         id:2,
         category:'product',
-        productName:'Boat 1',
+        productName:'Sailboat BAVARIA 34 10.8M(2007)',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
         // isOff:true,
@@ -52,7 +52,7 @@ export const Items = [
     {
         id:5,
         category:'accessory',
-        productName:'Boat 1',
+        productName:'Hanse 385 (2014)',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
         isOff:false,
@@ -70,7 +70,7 @@ export const Items = [
     {
         id:6,
         category:'accessory',
-        productName:'Boat 1',
+        productName:'Bavaria 42 Cruiser',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
         // isOff:true,
@@ -89,7 +89,7 @@ export const Items = [
     {
         id:7,
         category:'accessory',
-        productName:'Boat 1',
+        productName:'Bavaria 44',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
         // isOff:true,
@@ -107,7 +107,7 @@ export const Items = [
     {
         id:8,
         category:'accessory',
-        productName:'Boat 1',
+        productName:'Hense 400E Vila',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
         // isOff:true,
@@ -125,7 +125,7 @@ export const Items = [
     {
         id:9,
         category:'accessory',
-        productName:'Boat 1',
+        productName:'Benetau Oceanis 34',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
         isOff:false,
@@ -143,7 +143,7 @@ export const Items = [
     {
         id:10,
         category:'accessory',
-        productName:'Boat 1',
+        productName:'Elan Impression 40',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
         // isOff:true,
@@ -162,7 +162,7 @@ export const Items = [
     {
         id:11,
         category:'accessory',
-        productName:'Boat 1',
+        productName:'Grand Soleil 40',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
         // isOff:true,
@@ -180,7 +180,7 @@ export const Items = [
     {
         id:12,
         category:'accessory',
-        productName:'Boat 1',
+        productName:'Jeannau sun Odyssey',
         productPrice:'5000/Hour',
         description:'this is the fastest boat on the planet | you realy should try',
         // isOff:true,

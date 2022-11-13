@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "GoogleMapProject",
-    "slug": "GoogleMapProject",
+    "name": "Navr App",
+    "slug": "navr-app",
     "version": "1.0.0",
+    "description": "Navr is the best way to find and book boat trips in your Location. With features like getting estimated trip prices based on travel distance and boat type you're sure to find the perfect boat trip. You can also List your boat for daily payments.",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -18,16 +19,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.realagara.navrapp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.realagara.navrapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ea9586c7-bcbc-49a4-ab86-6edcb9a69167"
+      }
     }
   }
 }
